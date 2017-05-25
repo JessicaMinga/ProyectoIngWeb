@@ -128,6 +128,23 @@ public function get_validacionUsuario($correo,$clave){
     
         $rs = mysqli_query($this->db,$ssql); 
          $row = mysqli_fetch_object($rs);
+
+        $nombre = array(); //creamos un array
+        $descripcion = array(); //creamos un array
+        $latitud  = array(); //creamos un array
+        $longitud  = array(); //creamos un array
+        $foto = array();
+        //guardamos en un array multidimensional todos los datos de la consulta
+        $i=0;
+        while($row = mysqli_fetch_object($rs)){
+            $idfarmaciascanton[$i] = $row -> idfarmaciascanton;
+            $foto[$i] = $row -> foto;
+            $nombre[$i] = $row -> nombre;
+            $i++;
+        }
+    
+        mysqli_free_result($rs); 
+        return array($idfarmaciascanton,$foto,$nombre);
     }
 
 

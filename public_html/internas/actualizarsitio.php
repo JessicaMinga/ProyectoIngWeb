@@ -81,9 +81,9 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
+            <li ><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Editar Usuario</a></li>
-            <li><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
+            <li class="active"><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
             <li><a href="#">Ingresar Nuevo Sitio</a></li>
           </ul>
          
