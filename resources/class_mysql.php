@@ -34,16 +34,18 @@ public function get_validacionUsuario($correo,$clave){
             $ssql = "select * from provincia " ; 
             $rs = mysqli_query($this->db,$ssql); 
             $provincia = array(); //creamos un array
+            $idprovincia = array(); //creamos un array
         //guardamos en un array multidimensional todos los datos de la consulta
             $i=0;
             while($row = mysqli_fetch_object($rs)){
                 $provincia[$i] = $row -> nombreprovincia;
+                $idprovincia[$i]= $row -> idprovincia;
                 
                 $i++;
             }
         
             mysqli_free_result($rs); 
-            return array($provincia);
+            return array($idprovincia,$provincia);
     }
 
 
@@ -52,16 +54,18 @@ public function get_validacionUsuario($correo,$clave){
             $ssql = "select * from tipolugar " ; 
             $rs = mysqli_query($this->db,$ssql); 
             $tipo = array(); //creamos un array
+            $idtipolugar = array();
         //guardamos en un array multidimensional todos los datos de la consulta
             $i=0;
             while($row = mysqli_fetch_object($rs)){
                 $tipo[$i] = $row -> nombretipo;
+                $idtipolugar[$i] = $row -> idtipolugar; 
                 
                 $i++;
             }
         
             mysqli_free_result($rs); 
-            return array($tipo);
+            return array($idtipolugar,$tipo);
     }
 
     public function get_numSitios($TAMANO_PAGINA){
@@ -158,6 +162,23 @@ public function get_validacionUsuario($correo,$clave){
        
 
         return $actualizar;
+    }
+
+    public function get_eliminarSitio($id){
+
+     $eliminar=mysqli_query($this->db,"DELETE FROM turismo WHERE idturismo=$id");
+
+     return $eliminar;
+
+    }
+
+
+
+     public function get_ingresarSitio($nombre,$idtipositio,$idprovincia,$descripcion,$latitud,$longitud,$foto){
+
+        $query=mysqli_query($this->db,"INSERT INTO turismo(nombre, tipolugar, idprovincia, descripcion,latitud,longitud,foto) VALUES ('$nombre',$idtipositio,$idprovincia,'$descripcion','$latitud','$longitud','$foto')");
+
+        return $query;
     }
 
 }

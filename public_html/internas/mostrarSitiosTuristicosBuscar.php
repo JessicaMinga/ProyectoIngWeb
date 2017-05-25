@@ -7,11 +7,11 @@
      
 
         $provincias= $model -> get_provincias();
-        list($provincias)=$provincias;        
+        list($idprovincia,$provincias)=$provincias;        
         
 
         $tipo= $model -> get_tipo();
-        list($tipo)=$tipo;    
+        list($idtipolugar,$tipo)=$tipo;    
 
         $url= $url_site;
       
@@ -27,7 +27,7 @@
                                
                                 <?php 
                                     for ($i=0; $i < sizeof($provincias) ; $i++) { 
-                                        echo "<option>".$provincias[$i]."</option>";
+                                        echo "<option >".$provincias[$i]."</option>";
                                     }
                                  ?>
                                  
@@ -41,7 +41,7 @@
                                
                                 <?php 
                                     for ($i=0; $i < sizeof($tipo) ; $i++) { 
-                                        echo "<option>".$tipo[$i]."</option>";
+                                        echo "<option >".$tipo[$i]."</option>";
                                     }
                                  ?>
                                  

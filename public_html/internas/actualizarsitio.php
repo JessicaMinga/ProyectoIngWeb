@@ -56,15 +56,8 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li ><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Editar Usuario</a></li>
-            <li class="active"><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
-            <li><a href="#">Ingresar Nuevo Sitio</a></li>
-          </ul>
-         
-        </div>
+
+        <?php include("columnaad.php"); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
           
@@ -90,7 +83,8 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Descripcion</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion" value="<?php echo $sitio[1];?> ">
+            <textarea type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion"  rows="10" cols="50"><?php echo $sitio[1];?></textarea>
+              
             </div>
           </div>
           <div class="form-group">
