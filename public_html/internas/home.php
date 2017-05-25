@@ -47,7 +47,7 @@
 <body>
 <div class="main">
    <header>                     
-      <nav>  
+      <nav >  
         <ul class="menu">
               <li class="current"><a href="home.php">Home</a></li>
               <li><a href="Lugares.php">Lugares Turisticos</a></li>
@@ -157,16 +157,8 @@
     </section> 
 
 <!--==============================footer=================================-->
-  <footer>
-    <div class="container_24">
-        <div class="grid_11 prefix_1">
-          <p><strong>© 2012  Exterior design</strong> Busque m&aacute;s plantillas web gratis <a href="http://www.mejoresplantillasgratis.es" target="_blank">en MPG.es</a>. <br> <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank">Website Template</a> by TemplateMonster.com</p>
-        </div>
-        <div class="grid_12">  
-          <div class="soc-icons"><a href="#"><img src="../images/icon-1.png" alt=""></a><a href="#"><img src="../images/icon-2.png" alt=""></a><a href="#"><img src="../images/icon-3.png" alt=""></a></div>
-        </div>
-     </div>
-     <div class="clear"></div>       
-  </footer> 
+ <?php 
+    include("footer.php");
+  ?>
 </body>
 </html>

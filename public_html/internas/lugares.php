@@ -7,6 +7,7 @@
  <head>
  	<meta charset="UTF-8">
  	<title>Lugares Turísticos</title>
+ 	
  </head>
  <body>
  	
