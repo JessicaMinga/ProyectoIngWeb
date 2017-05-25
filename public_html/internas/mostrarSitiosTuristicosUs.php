@@ -60,7 +60,7 @@
           
            <div class="col-lg-10">
 
-        <div id="myDiv"><?php include("mlugares.php"); ?></div>
+        <div id="myDiv"><?php include("mostrarSitiosTuristicoscontenidoUs.php"); ?></div>
             
 
         </div>
