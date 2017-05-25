@@ -1,0 +1,41 @@
+nav.navbar.navbar-default{
+	text-align: center;
+
+}
+@media (max-width: 1024px){
+	header label{
+		display: block;
+	}
+	.menu{
+		position: absolute;
+		top: 10;
+		left: 0;
+		width: 90%;
+		transform: translateX(-100%); 
+		transition: all 0.3s; 
+
+	}	
+	
+	.menu ul{
+		display: block;
+		background: rgba(51,51,51,0.9);
+	}
+	.menu ul li:hover ul{
+		display: block;
+		position: static;
+		
+	}
+	
+	#btn-menu:checked ~ .menu{
+		transform: translateX(0%);
+	}
+
+	.menu ul ul{
+		background: rgba(0,0,0,0.4);
+	}
+
+	.menu ul ul a{
+		padding: 15px 40px;
+
+	}
+}
