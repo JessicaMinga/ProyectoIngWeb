@@ -5,11 +5,7 @@
         include("../../resources/class_mysql.php");
         extract($_GET);
         $model = new funcionesModelo(); 
-
-
-        
-
-	    
+   
 
 ?>
 

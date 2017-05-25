@@ -58,11 +58,11 @@
               
           </ul>
       </nav>
-      
-      <div class="slogan">Maintaining areas harmonious with <span>the natural environment</span></div>
+    
+      <div class="slogan"> <span>ECUADOR PARAÍSO TURISTICO</span> TODO LO MEJOR DE  ECUADOR <br>VEN Y CONÓCELO </div>
     </header>  
     <div id="slide">
-       <div class="slider">
+       <div class="slider" z-index="1">
           <ul class="items">
               <li><img src="../images/ecuador2.jpg" alt="" /></li>
               <li><img src="../images/ecuador3.jpg" alt="" /></li>

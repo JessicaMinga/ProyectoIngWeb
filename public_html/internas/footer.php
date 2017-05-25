@@ -1,3 +1,6 @@
+<link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css">
+  
+  
  <footer>
     <div class="container_24">
         <div class="grid_11 prefix_1">
