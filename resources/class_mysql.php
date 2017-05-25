@@ -124,7 +124,7 @@ public function get_validacionUsuario($correo,$clave){
     }
 
     public function get_datosItemSitio($id){
-       
+
         $ssql = "select * from turismo where idturismo= $id "; 
     
         $rs = mysqli_query($this->db,$ssql); 
@@ -152,6 +152,13 @@ public function get_validacionUsuario($correo,$clave){
         return array($nombre,$descripcion,$latitud, $longitud,$foto);
     }
 
+
+    public function get_actualizarSitio($id,$nombre,$descripcion,$latitud, $longitud,$foto){
+        $actualizar=mysqli_query($this->db, "UPDATE turismo SET nombre='$nombre', descripcion='$descripcion' , latitud ='$latitud', longitud='$longitud',foto='$foto' WHERE idturismo=$id");
+       
+
+        return $actualizar;
+    }
 
 }
 

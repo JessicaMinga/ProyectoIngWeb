@@ -80,35 +80,35 @@
 
 
 
-          <form class="form-horizontal" method="post" action="actualizaritemsitio.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
+          <form class="form-horizontal" method="post" action="actualizaritemsitioBase.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="cedula" placeholder="Cedula" name="cedula" value="<?php echo $nombre[0];?> " disabled>
+              <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="<?php echo $sitio[0];?> " >
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Descripcion</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $descripcion[1];?> ">
+              <input type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion" value="<?php echo $sitio[1];?> ">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Latitud</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="apellido"  placeholder="Apellido" name="apellido" value="<?php echo $latitud[2];?> ">
+              <input type="text" class="form-control" id="latitud"  placeholder="Latitud" name="latitud" value="<?php echo $sitio[2];?> ">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Longitud</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" value="<?php echo $longitud[3];?> ">
+              <input type="text" class="form-control" id="longitud" placeholder="Longitud" name="longitud" value="<?php echo $sitio[3];?> ">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Foto</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="telefono"  placeholder="Telefono" name="telefono" value="<?php echo $foto[4];?> ">
+              <input type="text" class="form-control" id="foto"  placeholder="Foto" name="foto" value="<?php echo $sitio[4];?> ">
             </div>
           </div>
            
