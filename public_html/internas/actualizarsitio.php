@@ -52,38 +52,15 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#"><?php echo $_SESSION['usuarioactual'];?></a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
-        </div>
-      </div>
-    </nav>
+<?php include("navad.php"); ?>
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
+            <li ><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
             <li><a href="#">Editar Usuario</a></li>
-            <li><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
+            <li class="active"><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
             <li><a href="#">Ingresar Nuevo Sitio</a></li>
           </ul>
          
@@ -95,7 +72,7 @@
 
           $sitio = $model -> get_datosItemSitio($id);
 
-
+        list($nombre,$descripcion,$latitud, $longitud,$foto)=$sitio;
 
           ?>
           
@@ -105,94 +82,36 @@
 
           <form class="form-horizontal" method="post" action="actualizaritemsitio.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Cedula</label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="cedula" placeholder="Cedula" name="cedula" value="<?php echo $usuario[0];?> " disabled>
-            </div>
-          </div>
-          <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $usuario[2];?> ">
+              <input type="text" class="form-control" id="cedula" placeholder="Cedula" name="cedula" value="<?php echo $nombre[0];?> " disabled>
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Apellido</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Descripcion</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="apellido"  placeholder="Apellido" name="apellido" value="<?php echo $usuario[3];?> ">
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $descripcion[1];?> ">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Correo</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Latitud</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" value="<?php echo $usuario[4];?> ">
+              <input type="text" class="form-control" id="apellido"  placeholder="Apellido" name="apellido" value="<?php echo $latitud[2];?> ">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Telefono</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Longitud</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="telefono"  placeholder="Telefono" name="telefono" value="<?php echo $usuario[5];?> ">
-            </div>
-          </div>
-           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Contraseña</label>
-            <div class="col-sm-10">
-              <input type="password"  id="contrasena" name="contrasena" placeholder="CONTRASEÑA" value="<?php echo $decrypted;?>" onclick="if(this.value=='<?php echo $decrypted; ?>') this.value=''" onblur="if(this.value=='') this.value='<?php echo $decrypted;?>'" />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label"></label>
-            <div class="col-sm-10">
-              <div class="progress" id="reflejar"></div>
+              <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" value="<?php echo $longitud[3];?> ">
             </div>
           </div>
           <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Confirmar Contraseña</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Foto</label>
             <div class="col-sm-10">
-              <input type="password"  id="contrasenaV" name="contrasenaV" placeholder="CONTRASEÑA" value="<?php echo $decrypted;?>" onclick="if(this.value=='<?php echo $decrypted; ?>') this.value=''" onblur="if(this.value=='') this.value='<?php echo $decrypted;?>'" />
+              <input type="text" class="form-control" id="telefono"  placeholder="Telefono" name="telefono" value="<?php echo $foto[4];?> ">
             </div>
           </div>
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Foto</label>
-            <div class="col-sm-10">
-             <input type="file" id="files" name="files[]" />
-                    <br />
-                    <output id="list"></output>
-                     
-                    <script>
-                          function archivo(evt) {
-                              var files = evt.target.files; // FileList object
-                         
-                              // Obtenemos la imagen del campo "file".
-                              for (var i = 0, f; f = files[i]; i++) {
-                                //Solo admitimos imágenes.
-                                if (!f.type.match('image.*')) {
-                                    continue;
-                                }
-                         
-                                var reader = new FileReader();
-                         
-                                reader.onload = (function(theFile) {
-                                    return function(e) {
-                                      // Insertamos la imagen
-                                     document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '" id="visualizar" />'].join('');
-                                    };
-                                })(f);
-                         
-                                reader.readAsDataURL(f);
-                              }
-                          }
-                         
-                          document.getElementById('files').addEventListener('change', archivo, false);
-                  </script>
-                              
-    </div>
-    <div id="imgvisualizar">
-      
-
-    </div>
-  </div>
+           
   
   
     <div class="form-group">
@@ -209,15 +128,6 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../js/vendor/holder.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+   
   </body>
 </html>
