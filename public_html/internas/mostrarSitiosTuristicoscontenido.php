@@ -105,7 +105,7 @@ echo "</div>";
 
 function EnviarA(i) { 
 var c = document.getElementById(i).innerHTML; 
-location.href = "internas/actualizarsitio.php?a="+c; 
+location.href = "actualizarsitio.php?a="+c; 
 } 
 
 function EnviarE(i) { 
