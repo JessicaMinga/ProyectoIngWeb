@@ -9,11 +9,7 @@
         $model = new funcionesModelo(); 
 
 
-        echo $_SESSION['usuarioactual'];
-
-	    
-	    
-		echo $_SESSION["usuariofoto"];
+       
 ?>
 
 <!DOCTYPE html>
@@ -55,15 +51,7 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li ><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Editar Usuario</a></li>
-            <li class="active"><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
-            <li><a href="#">Ingresar Nuevo Sitio</a></li>
-          </ul>
-         
-        </div>
+        <?php include("columnaad.php"); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Sitios Turisticos</h1>
 

@@ -56,15 +56,8 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li ><a href="administracion.php">Inicio <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Editar Usuario</a></li>
-            <li class="active"><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
-            <li><a href="#">Ingresar Nuevo Sitio</a></li>
-          </ul>
-         
-        </div>
+
+        <?php include("columnaad.php"); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
           
@@ -80,35 +73,36 @@
 
 
 
-          <form class="form-horizontal" method="post" action="actualizaritemsitio.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
+          <form class="form-horizontal" method="post" action="actualizaritemsitioBase.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="cedula" placeholder="Cedula" name="cedula" value="<?php echo $nombre[0];?> " disabled>
+              <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="<?php echo $sitio[0];?> " >
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Descripcion</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $descripcion[1];?> ">
+            <textarea type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion"  rows="10" cols="50"><?php echo $sitio[1];?></textarea>
+              
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Latitud</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="apellido"  placeholder="Apellido" name="apellido" value="<?php echo $latitud[2];?> ">
+              <input type="text" class="form-control" id="latitud"  placeholder="Latitud" name="latitud" value="<?php echo $sitio[2];?> ">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Longitud</label>
             <div class="col-sm-10">
-              <input type="email" class="form-control" id="correo" placeholder="Correo" name="correo" value="<?php echo $longitud[3];?> ">
+              <input type="text" class="form-control" id="longitud" placeholder="Longitud" name="longitud" value="<?php echo $sitio[3];?> ">
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Foto</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="telefono"  placeholder="Telefono" name="telefono" value="<?php echo $foto[4];?> ">
+              <input type="text" class="form-control" id="foto"  placeholder="Foto" name="foto" value="<?php echo $sitio[4];?> ">
             </div>
           </div>
            

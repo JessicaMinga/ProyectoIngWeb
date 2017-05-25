@@ -1,6 +1,16 @@
+<<<<<<< HEAD
+=======
+<?php include("../../resources/seguridad_a.php"); ?>
+
+
+>>>>>>> d41a331f4751848ed4a3d02580d5b9c66f20455b
 
 <?php include("../../resources/seguridad_a.php"); ?>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d41a331f4751848ed4a3d02580d5b9c66f20455b
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
