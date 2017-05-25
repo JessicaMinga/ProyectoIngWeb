@@ -90,7 +90,7 @@ nav.navbar.navbar-default{display:inline-block; z-index:1111; position:relative;
 .slogan {font-size:24px; line-height:30px; color:#ecc908; font-family: 'PT Sans Narrow', sans-serif; font-weight:bold;z-index:1111; position:relative; text-align:center; text-transform:uppercase; text-shadow:#000 1px 1px 1px; letter-spacing:1px; margin:11px 0 0 0; background:url(../images/slogan.png) center bottom no-repeat; padding-bottom:46px;}
 .slogan span {display:block; margin-top:-4px; }
 
-ul.nav.navbar-nav {margin:28px 0px 0px 43px; display:inline-block; float:left;}
+ul.nav.navbar-nav {margin: 0px 4px 4px 0px; display:inline-block; float:left;}
 ul..nav.navbar-nav  li {float:left; line-height:24px; margin:0px 48px 0px 48px; }
 ul..nav.navbar-nav  li:hover, ul..nav.navbar-nav  li.current { }
 ul..nav.navbar-nav  li a {font-size:18px; line-height:24px; color:#fff; font-family: 'PT Sans Narrow', sans-serif; font-weight:bold; display:inline-block; border-bottom:#61685b 1px solid; }

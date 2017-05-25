@@ -1,21 +1,15 @@
-<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-<div class="container">
-	<body>
-	
-	<div class="main">
-	<head>
-		<?php 
-			include("head.php");
-		?>
-	</head>	
 
-
-	</div>
-</body>
-
-
- <?php 
- 	include("footer.php");
-  ?>
-	
-</div>
+<?php 
+	include("nav.php");
+ ?>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>Lugares Turísticos</title>
+ </head>
+ <body>
+ 	
+ </body>
+ </html>
+ }
