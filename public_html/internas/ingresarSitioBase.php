@@ -28,7 +28,7 @@ echo '<script language="javascript">alert("No se ha ingresado");</script>';
 	
 }else{
 
-echo '<script language="javascript">alert("Ingreso correcto"); location.href="../index.php"</script>'; 
+echo '<script language="javascript">alert("Ingreso correcto"); location.href="ingresarSitio.php"</script>'; 
 	
 }
 

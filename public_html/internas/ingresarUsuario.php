@@ -12,8 +12,7 @@
       
 
 
-    $id=$_GET['a'];
- 
+
   
 ?>
 
@@ -56,53 +55,37 @@
 
     <div class="container-fluid">
       <div class="row">
-
         <?php include("columnaad.php"); ?>
+
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
-          
-          <?php 
-
-          $sitio = $model -> get_datosItemSitio($id);
-
-        list($nombre,$descripcion,$latitud, $longitud,$foto)=$sitio;
-
-          ?>
-          
-
-
-
-
-          <form class="form-horizontal" method="post" action="actualizaritemsitioBase.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
+          <h1 class="page-header">Ingresar Sitio Turistico</h1>
+      
+          <form class="form-horizontal"  method="post" action="ingresarUsuarioBase.php" enctype="multipart/form-data">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="<?php echo $sitio[0];?> " >
+              <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre"  >
+            </div>
+          </div>
+          
+          
+            
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Apellido</label>
+            <div class="col-sm-6">
+              <input type="text" class="form-control" id="apellido"  placeholder="apellido" name="apellido" >
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Descripcion</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Correo</label>
             <div class="col-sm-6">
-            <textarea type="text" class="form-control" id="descripcion" placeholder="descripcion" name="descripcion"  rows="10" cols="50"><?php echo $sitio[1];?></textarea>
-              
+              <input type="email" class="form-control" id="correo" placeholder="correo" name="correo" >
             </div>
           </div>
           <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Latitud</label>
+            <label for="inputEmail3" class="col-sm-2 control-label">Caontraseña</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" id="latitud"  placeholder="Latitud" name="latitud" value="<?php echo $sitio[2];?> ">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Longitud</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="longitud" placeholder="Longitud" name="longitud" value="<?php echo $sitio[3];?> ">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Foto</label>
-            <div class="col-sm-6">
-              <input type="text" class="form-control" id="foto"  placeholder="Foto" name="foto" value="<?php echo $sitio[4];?> ">
+              <input type="password" class="form-control" id="contrasena"  placeholder="contraseña" name="contrasena" >
             </div>
           </div>
            
@@ -110,7 +93,7 @@
   
     <div class="form-group">
     <div class="col-sm-offset-2 col-sm-6">
-      <button type="submit" class="btn btn-default">Actualizar</button>
+      <button type="submit" class="btn btn-default">Ingresar</button>
     </div>
   </div>
 </form>

@@ -1,5 +1,5 @@
 <?php 
-		include("../../resources/seguridad_a.php"); 
+		include("../../resources/seguridad_u.php"); 
 
 
 		include("../../resources/config.php");
@@ -52,12 +52,12 @@
 
   <body>
 
-<?php include("navad.php"); ?>
+<?php include("navus.php"); ?>
 
     <div class="container-fluid">
       <div class="row">
 
-        <?php include("columnaad.php"); ?>
+        <?php include("columnaus.php"); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
           
@@ -73,7 +73,7 @@
 
 
 
-          <form class="form-horizontal" method="post" action="actualizaritemsitioBase.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
+          <form class="form-horizontal" method="post" action="actualizaritemsitioBaseUs.php?a=<?php echo $id; ?>" enctype="multipart/form-data">
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
             <div class="col-sm-6">
@@ -90,19 +90,19 @@
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Latitud</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" id="latitud"  placeholder="Latitud" name="latitud" value="<?php echo $sitio[2];?> ">
+              <input type="text" class="form-control" id="latitud"  placeholder="Latitud" name="latitud" value="<?php echo $sitio[2];?> " disabled>
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Longitud</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" id="longitud" placeholder="Longitud" name="longitud" value="<?php echo $sitio[3];?> ">
+              <input type="text" class="form-control" id="longitud" placeholder="Longitud" name="longitud" value="<?php echo $sitio[3];?> " disabled>
             </div>
           </div>
           <div class="form-group">
             <label for="inputEmail3" class="col-sm-2 control-label">Foto</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" id="foto"  placeholder="Foto" name="foto" value="<?php echo $sitio[4];?> ">
+              <input type="text" class="form-control" id="foto"  placeholder="Foto" name="foto" value="<?php echo $sitio[4];?> " >
             </div>
           </div>
            

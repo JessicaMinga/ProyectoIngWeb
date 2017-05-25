@@ -181,6 +181,24 @@ public function get_validacionUsuario($correo,$clave){
         return $query;
     }
 
+    public function get_ingresarUsuario($nombre,$apellido,$correo,$encrypted){
+
+            $query=mysqli_query($this->db,"INSERT INTO usuario (nombre, apellido, correo, contrasena) VALUES ('$nombre','$apellido','$correo','$encrypted')");
+
+        return $query;
+
+
+    }
+
+    public function get_actualizarSitioUs($id,$nombre,$descripcion,$foto){
+        $actualizar=mysqli_query($this->db, "UPDATE turismo SET nombre='$nombre', descripcion='$descripcion' ,foto='$foto' WHERE idturismo=$id");
+       
+
+        return $actualizar;
+    }
+
+
+    
 }
 
 

@@ -4,6 +4,7 @@
             <li><a href="#">Editar Usuario</a></li>
             <li ><a href="mostrarSitiosTuristicos.php">Mostrar Sitios turisticos</a></li>
             <li><a href="ingresarSitio.php">Ingresar Nuevo Sitio</a></li>
+            <li><a href="ingresarUsuario.php">Ingresar Nuevo Usuario</a></li>
           </ul>
          
         </div>
