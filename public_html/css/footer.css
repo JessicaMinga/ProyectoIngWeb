@@ -1,0 +1,33 @@
+footer {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 24px 0px 20px 0;
+    background: url(../images/footer.jpg) 0 0 repeat-x;
+}
+.container_24 {
+    margin: 0 auto;
+    width: 960px;
+}
+.container_24 .prefix_1 {
+    padding-left: 40px;
+}
+grid_24.css:1
+.container_24 .grid_11 {
+    width: 430px;
+}
+footer p {
+    float: left;
+    width: 320px;
+    padding-top: 0px;
+    font-family: Tahoma, Geneva, sans-serif;
+    line-height: 18px;
+    font-size: 12px;
+}
+footer p a {
+    color: #717171;
+    text-decoration: underline;
+}
+.container_24 .grid_12 {
+    width: 470px;
+}

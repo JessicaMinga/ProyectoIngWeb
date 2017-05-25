@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<link rel="stylesheet" href="../css/bootstrap.min.css">
-<link rel="stylesheet" href="../css/menu.css">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-=======
+
 <?php include("../../resources/seguridad_a.php"); ?>
 
-
-
-
->>>>>>> 482bd4da798d141118e5fdc5ae0b6034fd205642
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
@@ -32,11 +24,9 @@
        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <?php echo $_SESSION['usuarioactual']; ?> <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-<<<<<<< HEAD
-            <li><a href="login.php">Salir</a></li>
-=======
+
             <li><a href="../../resources/salir.php">salir</a></li>
->>>>>>> 482bd4da798d141118e5fdc5ae0b6034fd205642
+
            
           </ul>
         </li>
