@@ -1,17 +1,80 @@
-<?php 
-    include("../../resources/config.php");
- ?>
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/grid_24.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/slider.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
+    <script src="../js/jquery-1.7.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/tms-0.4.1.js"></script>
+    <script>
+    $(document).ready(function(){           
+      $('.slider')._TMS({
+        show:0,
+        pauseOnHover:true,
+        prevBu:'.prev',
+        nextBu:'.next',
+        playBu:false,
+        duration:10000,
+        preset:'zoomer',
+        pagination:false,
+        pagNums:false,
+        slideshow:700000,
+        numStatus:false,
+        banners:false,
+        waitBannerAnimation:true,
+        progressBar:false
+      })    
+    });
+  </script>
+  <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="js/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+  <![endif]-->
+</head>
 <body>
 <div class="main">
-  <?php 
-    include("header.php");
-   ?>  
+   <header>                     
+      <nav>  
+        <ul class="menu">
+              <li class="current"><a href="home.php">Home</a></li>
+              <li><a href="Lugares.php">Lugares Turisticos</a></li>
+              <li><a href="busquedas.php">Búsquedas</a></li>
+              <li><a href="rutas.php">Rutas</a></li>
+              <li><a href="contactos.php">Contactos</a></li>
+              <li><a href="login.php">Login</a></li>
+              
+          </ul>
+      </nav>
+      
+      <div class="slogan">Maintaining areas harmonious with <span>the natural environment</span></div>
+    </header>  
+    <div id="slide">
+       <div class="slider">
+          <ul class="items">
+              <li><img src="../images/ecuador2.jpg" alt="" /></li>
+              <li><img src="../images/ecuador3.jpg" alt="" /></li>
+              <li><img src="../images/ecuador2.jpg" alt="" /></li>
+              
+          </ul>
+       </div>
+       <a href="#" class="prev">&nbsp;</a><a href="#" class="next">&nbsp;</a>
+    </div>
   <!--==============================content================================-->
-    <section id="content"><div class="ic"></div>
-    	<div class="container_24">
+     <section id="content"><div class="ic"></div>
+      <div class="container_24">
             <div class="grid_5 prefix_1">
               <div class="text-1"><span>01.</span><strong>Región <br>Costa</strong></div>
                 <div class="img-border"><img width="190em" height="90em" src="../images/costa.jpg" alt="" class="pq"></div>
@@ -92,9 +155,18 @@
             <div class="clear"></div>
         </div>
     </section> 
+
 <!--==============================footer=================================-->
-   <?php 
-      include("footer.php");
-    ?>
+  <footer>
+    <div class="container_24">
+        <div class="grid_11 prefix_1">
+          <p><strong>© 2012  Exterior design</strong> Busque m&aacute;s plantillas web gratis <a href="http://www.mejoresplantillasgratis.es" target="_blank">en MPG.es</a>. <br> <a rel="nofollow" href="http://www.templatemonster.com/" target="_blank">Website Template</a> by TemplateMonster.com</p>
+        </div>
+        <div class="grid_12">  
+          <div class="soc-icons"><a href="#"><img src="../images/icon-1.png" alt=""></a><a href="#"><img src="../images/icon-2.png" alt=""></a><a href="#"><img src="../images/icon-3.png" alt=""></a></div>
+        </div>
+     </div>
+     <div class="clear"></div>       
+  </footer> 
 </body>
 </html>

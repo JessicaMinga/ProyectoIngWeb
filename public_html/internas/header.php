@@ -1,5 +1,7 @@
- <head>
-   <title>Home</title>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Home</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/grid_24.css">
@@ -20,7 +22,7 @@
         playBu:false,
         duration:10000,
         preset:'zoomer',
-        pagination:false,ss
+        pagination:false,
         pagNums:false,
         slideshow:700000,
         numStatus:false,
@@ -30,15 +32,15 @@
       })    
     });
   </script>
-	
+  
 </head>
+<body>
+<div class="main">
+   <header>                     
+      <?php include("nav.php"); ?>
 
- <header>                   	
-    <?php 
-      include("nav.php");
-    ?>  
-      <h1><a href="index.html"></a></h1> 
-      <div class="slogan">ECUADOR PARAÍSO TURÍSTICO  TODO LO MEJOR DE ECUADOR <span> VEN Y CONÓCELO</span></div>
+     
+      <div class="slogan">Maintaining areas harmonious with <span>the natural environment</span></div>
     </header>  
     <div id="slide">
        <div class="slider">
@@ -46,7 +48,12 @@
               <li><img src="../images/ecuador3.jpg" alt="" /></li>
               <li><img src="../images/ecuador2.jpg" alt="" /></li>
               <li><img src="../images/ecuador3.jpg" alt="" /></li>
+              
           </ul>
        </div>
        <a href="#" class="prev">&nbsp;</a><a href="#" class="next">&nbsp;</a>
     </div>
+  
+
+</body>
+</html>

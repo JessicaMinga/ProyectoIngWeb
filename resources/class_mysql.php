@@ -123,6 +123,12 @@ public function get_validacionUsuario($correo,$clave){
 
     }
 
+    public function get_datosItemSitio($id){
+        $ssql = "select * from turismo where id=".$id ; 
+    
+        $rs = mysqli_query($this->db,$ssql); 
+         $row = mysqli_fetch_object($rs);
+    }
 
 
 }

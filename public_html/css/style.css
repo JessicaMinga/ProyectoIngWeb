@@ -1,5 +1,3 @@
-
-
 /* Global properties ======================================================== */
 html, body {width:100%; padding:0; margin:0;}
 
@@ -78,6 +76,7 @@ ul.list-1 li a:hover {color:#b09609;}
 
 .p1 {padding-bottom:18px;}
 .p2 {padding-bottom:24px;}
+
 /*********************************header*************************************/
 header{ width:960px; position:absolute; top:0; left:50%; margin-left:-480px;}
 .sub-pages {background:url(../images/slider.jpg) 0 bottom repeat-x; margin-bottom:38px; padding-bottom:3px;}
@@ -85,16 +84,24 @@ header{ width:960px; position:absolute; top:0; left:50%; margin-left:-480px;}
 
 h1 {display:inline-block; z-index:1111; margin:79px 0px 0 77px; position:relative;}
 
-nav.navbar.navbar-default{display:inline-block; z-index:1111; position:relative; margin:0 auto; width:1000px; text-align:center;}
+nav {display:inline-block; z-index:1111; position:relative; margin:0 auto; width:1000px; text-align:center;}
 
 .slogan {font-size:24px; line-height:30px; color:#ecc908; font-family: 'PT Sans Narrow', sans-serif; font-weight:bold;z-index:1111; position:relative; text-align:center; text-transform:uppercase; text-shadow:#000 1px 1px 1px; letter-spacing:1px; margin:11px 0 0 0; background:url(../images/slogan.png) center bottom no-repeat; padding-bottom:46px;}
 .slogan span {display:block; margin-top:-4px; }
 
+<<<<<<< HEAD
 ul.nav.navbar-nav {margin: 0px 4px 4px 0px; display:inline-block; float:left;}
 ul..nav.navbar-nav  li {float:left; line-height:24px; margin:0px 48px 0px 48px; }
 ul..nav.navbar-nav  li:hover, ul..nav.navbar-nav  li.current { }
 ul..nav.navbar-nav  li a {font-size:18px; line-height:24px; color:#fff; font-family: 'PT Sans Narrow', sans-serif; font-weight:bold; display:inline-block; border-bottom:#61685b 1px solid; }
 ul..nav.navbar-nav  li a:hover , ul..nav.navbar-nav  li.current a { color:#858785; border:none; }
+=======
+ul.menu {margin:28px 0px 0px 43px; display:inline-block; float:left;}
+ul.menu li {float:left; line-height:24px; margin:0px 48px 0px 48px; }
+ul.menu li:hover, ul.menu li.current { }
+ul.menu li a {font-size:18px; line-height:24px; color:#fff; font-family: 'PT Sans Narrow', sans-serif; font-weight:bold; display:inline-block; border-bottom:#61685b 1px solid; }
+ul.menu li a:hover , ul.menu li.current a { color:#858785; border:none; }
+>>>>>>> 8138c8c17bdf13e684fc56dee2b14a8c58b0d7ad
 
 /*********************************content*************************************/
 #content {width:960px; margin:0 auto; padding:0px 0px 75px 0;}
