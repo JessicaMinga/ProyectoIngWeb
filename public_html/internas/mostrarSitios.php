@@ -1,8 +1,8 @@
 <?php 
-		include("../../resources/seguridad_u.php"); 
+	
 
 
-		include("../../resources/config.php");
+		    include("../../resources/config.php");
       
         include("../../resources/class_mysql.php");
         extract($_GET);
@@ -47,20 +47,20 @@
 
   <body>
 
-    <?php include("navus.php"); ?>
+    <?php include("nav.php"); ?>
 
     <div class="container-fluid">
       <div class="row">
-        <?php include("columnaus.php"); ?>
+        <?php include("columnaad.php"); ?>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Sitios Turisticos</h1>
 
-          <?php include("mostrarSitiosTuristicosBuscarUs.php"); ?>
+          <?php include("mostrarSitiosTuristicosBuscar.php"); ?>
 
           
            <div class="col-lg-10">
 
-        <div id="myDiv"><?php include("mlugares.php"); ?></div>
+        <div id="myDiv"><?php include("mostrarSitiosTuristicoscontenido.php"); ?></div>
             
 
         </div>

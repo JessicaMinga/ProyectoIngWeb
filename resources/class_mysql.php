@@ -198,6 +198,18 @@ public function get_validacionUsuario($correo,$clave){
     }
 
 
+
+    public function get_mapaSitio($id){
+                     
+            $ssql = "select * from turismo WHERE idturismo=".$id; 
+            $rs = mysqli_query($this->db,$ssql); 
+            $row = mysqli_fetch_object($rs);
+            mysqli_free_result($rs); 
+            return($row);
+    }
+
+
+
     
 }
 
