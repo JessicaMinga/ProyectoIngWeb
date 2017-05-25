@@ -124,10 +124,11 @@ public function get_validacionUsuario($correo,$clave){
     }
 
     public function get_datosItemSitio($id){
-        $ssql = "select * from turismo where id=".$id ; 
+       
+        $ssql = "select * from turismo where idturismo= $id "; 
     
         $rs = mysqli_query($this->db,$ssql); 
-         $row = mysqli_fetch_object($rs);
+         
 
         $nombre = array(); //creamos un array
         $descripcion = array(); //creamos un array
@@ -137,14 +138,18 @@ public function get_validacionUsuario($correo,$clave){
         //guardamos en un array multidimensional todos los datos de la consulta
         $i=0;
         while($row = mysqli_fetch_object($rs)){
-            $idfarmaciascanton[$i] = $row -> idfarmaciascanton;
-            $foto[$i] = $row -> foto;
-            $nombre[$i] = $row -> nombre;
+            $nombre =$row -> nombre; //creamos un array
+            $descripcion = $row -> descripcion; //creamos un array
+            $latitud  = $row -> latitud; //creamos un array
+            $longitud  = $row -> longitud; //creamos un array
+            $foto = $row -> foto;
+
+            
             $i++;
         }
     
         mysqli_free_result($rs); 
-        return array($idfarmaciascanton,$foto,$nombre);
+        return array($nombre,$descripcion,$latitud, $longitud,$foto);
     }
 
 
